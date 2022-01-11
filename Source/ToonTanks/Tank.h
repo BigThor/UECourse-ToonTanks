@@ -29,6 +29,9 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	void HandleDestruction();
+	APlayerController* GetTankPlayerController();
+
 private:
 	void Move(float Value);
 	void Turn(float Value);
@@ -45,5 +48,5 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	float RotationSpeed;
 
-	class APlayerController* PlayerController;
+	class APlayerController* TankPlayerController;
 };
