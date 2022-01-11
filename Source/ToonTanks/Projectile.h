@@ -41,4 +41,9 @@ private:
 	class UParticleSystem* HitParticles;
 	UPROPERTY(EditDefaultsOnly, Category = "Components")
 	class UParticleSystemComponent* TrailParticles;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Components")
+	class USoundBase* LaunchSound;
+	UPROPERTY(EditDefaultsOnly, Category = "Components")
+	class USoundBase* HitSound;
 };
