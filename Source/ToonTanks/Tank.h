@@ -31,6 +31,7 @@ public:
 
 	void HandleDestruction();
 	APlayerController* GetTankPlayerController();
+	bool IsAlive();
 
 private:
 	void Move(float Value);
@@ -49,4 +50,5 @@ private:
 	float RotationSpeed;
 
 	class APlayerController* TankPlayerController;
+	bool bAlive = true;
 };

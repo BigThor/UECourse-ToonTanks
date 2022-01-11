@@ -61,11 +61,17 @@ void ATank::HandleDestruction()
 
 	SetActorHiddenInGame(true);
 	SetActorTickEnabled(false);
+	bAlive = false;
 }
 
 APlayerController* ATank::GetTankPlayerController()
 {
 	return TankPlayerController;
+}
+
+bool ATank::IsAlive()
+{
+	return bAlive;
 }
 
 void ATank::Move(float Value)

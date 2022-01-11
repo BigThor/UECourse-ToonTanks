@@ -41,8 +41,13 @@ void ATower::HandleDestruction()
 
 void ATower::CheckFireCondition()
 {
+	if (!Tank)
+	{
+		return;
+	}
+
 	// Check if the Tank is in range
-	if (InFireRange())
+	if (InFireRange() && Tank->IsAlive())
 	{
 		Fire();
 	}
@@ -51,7 +56,9 @@ void ATower::CheckFireCondition()
 bool ATower::InFireRange()
 {
 	if (!Tank)
+	{
 		return false;
+	}
 
 	// Find distance to the tank
 	float Distance = FVector::Dist(GetActorLocation(), Tank->GetActorLocation());
