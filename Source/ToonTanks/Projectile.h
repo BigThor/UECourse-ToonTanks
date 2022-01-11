@@ -46,4 +46,7 @@ private:
 	class USoundBase* LaunchSound;
 	UPROPERTY(EditDefaultsOnly, Category = "Components")
 	class USoundBase* HitSound;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Components")
+	TSubclassOf<class UCameraShakeBase> HitCameraShakeClass;
 };
