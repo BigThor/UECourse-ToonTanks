@@ -20,11 +20,15 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent)
 	void StartGame();
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void GameOver(bool bWonGame);
+
 public:
 	void ActorDied(AActor* DeadActor);
 
 private:
 	void HandleGameStart();
+	int32 GetCurrentTowerCount();
 
 
 private:
@@ -32,4 +36,5 @@ private:
 	class AToonTanksPlayerController* ToonTanksPlayerController;
 
 	float StartDelay = 3.f;
+	int32 CurrentTowerCount = 0;
 };
